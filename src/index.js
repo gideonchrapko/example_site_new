@@ -5,7 +5,6 @@ import App from "./App";
 import { createBrowserHistory } from "history";
 import { Router, Route } from "react-router-dom";
 
-const rootElement = document.getElementById("root");
 const customHistory = createBrowserHistory({
   // basename: config.urlBasename || ""
 });
@@ -19,5 +18,5 @@ ReactDOM.render(
       }}
     />
   </Router>,
-  rootElement
-);
+  document.getElementById('root')
+  );
