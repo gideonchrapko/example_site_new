@@ -17,18 +17,33 @@ export default function Page1() {
       concurrent
       // noEvents={active}
       pixelRatio={window.devicePixelRatio}
-      camera={{ position: [0, 0, 6.5] }}
+      // camera={{ position: [0, 0, 6.5] }}
       gl={{ antialias: false }}
-      onCreated={({ gl, scene }) => {
+      onCreated={({ gl, scene, camera, spotlight, lighthelper }) => {
+        scene.add( camera )
+        camera.position.set(0, 0, 6.5)
         gl.toneMapping = THREE.ACESFilmicToneMapping
         gl.outputEncoding = THREE.sRGBEncoding
         scene.background = new THREE.Color('#373737')
+        spotlight = new THREE.SpotLight( 0xffffff, 1 );
+				spotlight.position.set( 0, 10, -20 );
+				spotlight.angle = Math.PI / 4;
+				spotlight.penumbra = 0.05;
+				spotlight.decay = 2;
+				spotlight.distance = 200;
+				spotlight.castShadow = true;
+				spotlight.shadow.mapSize.width = 1024;
+				spotlight.shadow.mapSize.height = 1024;
+				spotlight.shadow.camera.near = 10;
+				spotlight.shadow.camera.far = 200;
+        scene.add( spotlight );
+
+				lighthelper = new THREE.SpotLightHelper( spotlight );
+				scene.add( lighthelper );
         //scene.background.convertSRGBToLinear()
       }}>
       {/* <Lights /> */}
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
-      <pointLight intensity={1} position={[0, 10, 10]} />
-      <Shadow renderOrder={10} color="white" stop={0.1} scale={[8, 8, 1]} position={[0, -1.49, 10]} rotation={[-Math.PI / 2, 0, 0]} />
       {/* <Controls disable={set} /> */}
       <Controls />
       <Suspense fallback={<Dom center>help me...</Dom>}>
@@ -39,6 +54,10 @@ export default function Page1() {
           rotation={[0, -0.8, 0]}
           onClick={() => window.appHistory.push("/page2")}
           />
+        <mesh receiveShadow>
+          <planeBufferGeometry attach="geometry" args={[1000, 1000]} />
+          <meshStandardMaterial attach="material" color="#A2ACB6" roughness={1} />
+        </mesh>
         <Effects />
       </Suspense>
     </Canvas>
