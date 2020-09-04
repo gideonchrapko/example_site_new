@@ -1120,7 +1120,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -3908,6 +3908,21 @@ dotenv@6.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
 
+drei@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/drei/-/drei-1.3.2.tgz#d3952e627f9df60c064721007f141e3086a4574e"
+  integrity sha512-ThkqCeWocjkuApwfAEO9IxYwFKqZbLTVoO2nIov2usVSedFBh1nwUgoprLkx2htJf6Ba45QdiASlu4SmMm6rWw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    glsl-noise "^0.0.0"
+    lodash.omit "^4.5.0"
+    lodash.pick "^4.4.0"
+    react-merge-refs "^1.0.0"
+    stats.js "^0.17.0"
+    troika-three-text "^0.31.0"
+    utility-types "^3.10.0"
+    zustand "^3.0.3"
+
 duplexer@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -4939,6 +4954,11 @@ globby@^6.1.0:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+glsl-noise@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/glsl-noise/-/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
+  integrity sha1-NndF86MzgsDu7Ey1S36Zz8HXZws=
 
 gonzales-pe@^4.2.3:
   version "4.3.0"
@@ -6643,6 +6663,16 @@ lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
+
+lodash.omit@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
+  integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
+
+lodash.pick@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
+  integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
 
 lodash.set@^4.3.2:
   version "4.3.2"
@@ -8928,10 +8958,10 @@ react-spring@8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.1.4.tgz#55ea847f6aa7bd88eea077c1212151343be94427"
-  integrity sha512-c1NchqRPAP27GQchSKkpRgz+XwwPvRJo/cTjPWQmX0H2MqnIu4vBTV1GKBqn+uWeDHjjfcWHZyq8zH5JccP+NA==
+react-three-fiber@4.2.17:
+  version "4.2.17"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.2.17.tgz#2f9e9f03d9a2bfe6e21521130965c19a39e44edf"
+  integrity sha512-7hst8PH0sJ/FbAmImXQahLxCNEtFa4+9kORuoygjwB4vLqE0z+m6w5gBWNk+ri0R4/85/o17worgcRgGcNXuSQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@juggle/resize-observer" "^3.1.3"
@@ -9864,6 +9894,11 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
+stats.js@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/stats.js/-/stats.js-0.17.0.tgz#b1c3dc46d94498b578b7fd3985b81ace7131cc7d"
+  integrity sha1-scPcRtlEmLV4t/05hbgaznExzH0=
+
 "statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
@@ -10355,6 +10390,24 @@ tr46@^1.0.1:
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
+
+troika-three-text@^0.31.0:
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/troika-three-text/-/troika-three-text-0.31.0.tgz#0c4dbd55c2d6d4516d60fc5247031464b056cf3f"
+  integrity sha512-JpRO+AC9mLZ49IymBwwwFLcasN0xjjQmSkGO9tlzlpeHpexsK4JB80qs6d6vhtt+vmfdJi27/m+WYhaR6+OzaQ==
+  dependencies:
+    troika-three-utils "^0.31.0"
+    troika-worker-utils "^0.31.0"
+
+troika-three-utils@^0.31.0:
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/troika-three-utils/-/troika-three-utils-0.31.0.tgz#825d79313d04112fdfc63389ff5531ab8d7ba1a7"
+  integrity sha512-IUy61i+Kv0EjievWhOmIkqjDa1acIO2J98oO2tZ+PpEfA+Q0syRknH4SN+iiYpa/MNJH1gQz0WfZF4Vk1/pumQ==
+
+troika-worker-utils@^0.31.0:
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/troika-worker-utils/-/troika-worker-utils-0.31.0.tgz#3d6783265f74cda1860e9d8369de433d29c70b92"
+  integrity sha512-WxHhfFmy6dWBMACUnzInBlqlR601Dy3c9hiRp4aAN+ACzSldwsv1SHOqix4X2+6HTz/pBtHtfJVDbwJiO+lbCw==
 
 ts-pnp@1.1.2:
   version "1.1.2"
@@ -11231,3 +11284,8 @@ zip-stream@^3.0.1:
     archiver-utils "^2.1.0"
     compress-commons "^3.0.0"
     readable-stream "^3.6.0"
+
+zustand@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.0.3.tgz#5a8395f1543be4cd865ca86e20cecba01e2cec2c"
+  integrity sha512-/Mr18AHb3kZ9C8VbWevmqMP1QVScOctIG1hHy1J9amVfcLgYBIJvvMhW0bz5tF3j325ZdyOnk0m2z5NUbsScEg==

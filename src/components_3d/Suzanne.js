@@ -40,8 +40,8 @@ export default function Suzanne(props) {
           normalMap-repeat={[40, 40]}
         />
       </mesh>
-      <Shadow renderOrder={2} position={[0, -1.5, -0.1]} scale={[4, 3, 1]} rotation={[-Math.PI / 2, 0, 0]} />
-      <Shadow renderOrder={1} stop={0.5} opacity={0.6} position={[0, -1.5001, 1.5]} scale={[2.6, 1.5, 1]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Shadow renderOrder={2} position={[0, -1.8, -0.1]} scale={[4, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Shadow renderOrder={1} stop={0.5} opacity={0.6} position={[0, -1.8, 1.5]} scale={[2.6, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }

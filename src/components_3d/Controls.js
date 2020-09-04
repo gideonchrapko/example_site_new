@@ -5,7 +5,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 extend({ OrbitControls })
 
 export default function Controls({ disable, ...props }) {
-  
   const { camera, gl } = useThree()
   const ref = useRef()
   useFrame(() => ref.current.update())
@@ -15,8 +14,7 @@ export default function Controls({ disable, ...props }) {
       ref.current.addEventListener('start', () => disable(true))
       ref.current.addEventListener('end', () => disable(false))
     }
-    //terminal window said  [disable] was missing
-  }, [disable])
+  }, [])
 
   return (
     <orbitControls
