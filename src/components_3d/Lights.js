@@ -5,24 +5,18 @@ import Shadow from './Shadow'
 import volumetricSpotlight from './VolumetricSpotlight'
 
 export default function Lights() {
-  const ref = useRef()
-  useFrame(() => (ref.current.rotation.y += 0.0))
+
   return (
     <>
-      {/* <pointLight position={[1, 1, -1]} intensity={4} castShadow /> */}
-      <group ref={ref} >
-        <pointLight 
-          intensity={4} 
-          position={[1, 1, 1]} 
-          castShadow
-        >
-          <mesh position={[0, 1, 0]} >
+        <pointLight position={[0, 10, -10]} intensity={2} />
+        <pointLight intensity={3} position={[0, 4, -10]}>
+          <mesh position={[0, 0, 0]} >
             <sphereBufferGeometry attach="geometry" args={[0.5, 32, 32]} />
             <meshBasicMaterial attach="material" color="white" />
           </mesh>
         </pointLight>
-        <Shadow renderOrder={10} color="white" stop={0.1} scale={[10, 10, 10]} position={[1, -2, -10]} rotation={[-Math.PI / 2, 0, 0]} />
-      </group>
+        <Shadow renderOrder={10} color="white" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -7]} rotation={[-Math.PI / 2, 0, 0]} />
+
     </>
       // <>
       //        <pointLight position={[1, 1, -1]} intensity={4} castShadow />

@@ -31,7 +31,7 @@ export default function Sphere(props) {
           //normalMap-anisotropy={16}
         />
       </mesh>
-      <Shadow position={[0, -1.5, 0]} scale={[4, 4, 1]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Shadow position={[0, -1.8, 0]} scale={[4, 4, 1]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }

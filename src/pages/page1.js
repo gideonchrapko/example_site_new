@@ -28,15 +28,15 @@ export default function Page1() {
     onCreated={({ gl, scene }) => {
       gl.toneMapping = THREE.ACESFilmicToneMapping
       gl.outputEncoding = THREE.sRGBEncoding
-      scene.background = new THREE.Color('#373737')
+      scene.background = new THREE.Color('#242424')
       }}>
       <Controls disable={set} />
       <Suspense fallback={<Dom center>Loading...</Dom>}>
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
-      <fog attach="fog" args={["#222831", 0, 20]} />
+      <fog attach="fog" args={["#242424", 10, 20]} />
       <Suzanne 
             position={[5, -1, -4]} 
-            rotation={[0, -3, 0]}
+            rotation={[0, -4, 0]}
             onClick={() => window.appHistory.push("/page2")}
           />
           <Sphere 
@@ -50,7 +50,7 @@ export default function Page1() {
         >
           <Lights />
           <Environment />
-          {/* <Effects /> */}
+          <Effects />
       </PerspectiveCamera>
       </Suspense>
     </Canvas>
