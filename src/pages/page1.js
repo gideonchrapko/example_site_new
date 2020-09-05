@@ -23,7 +23,7 @@ export default function Page1() {
     concurrent
     noEvents={active}
     pixelRatio={window.devicePixelRatio}
-    camera={{ position: [0, 0, 6.5] }}
+    camera={{ position: [0, 0, 10] }}
     gl={{ antialias: false }}
     onCreated={({ gl, scene }) => {
       gl.toneMapping = THREE.ACESFilmicToneMapping
@@ -35,19 +35,19 @@ export default function Page1() {
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
       <fog attach="fog" args={["#242424", 10, 20]} />
       <Suzanne 
-            position={[5, -1, -4]} 
+            position={[5, -0.5, -4]} 
             rotation={[0, -4, 0]}
-            onClick={() => window.appHistory.push("/page2")}
-          />
-          <Sphere 
+            onClick={() => window.appHistory.push("/shop")}
+      />
+      <Sphere 
             position={[-5, -1, -4]} 
-            onClick={() => window.appHistory.push("/page2")}
-          />
-      <PerspectiveCamera
-          makeDefault
-          // default={false}
-          position={[1, 1, -15]}
-        >
+            onClick={() => window.appHistory.push("/gallery")}
+      />
+      <Sphere 
+            position={[4, -1, 6]} 
+            onClick={() => window.appHistory.push("/gallery")}
+      />
+      <PerspectiveCamera makeDefault position={[1, 1, -15]} >
           <Lights />
           <Environment />
           <Effects />

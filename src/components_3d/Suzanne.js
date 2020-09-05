@@ -22,7 +22,7 @@ export default function Suzanne(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
-        scale={[1.7, 1.7, 1.7]}
+        scale={[2, 2, 2]}
         position={[0, -0.75, 0]}
         geometry={nodes.Suzanne.geometry}
         rotation={[-0.61, 0, 0]}
@@ -40,8 +40,8 @@ export default function Suzanne(props) {
           normalMap-repeat={[40, 40]}
         />
       </mesh>
-      <Shadow renderOrder={2} position={[0, -1.8, -0.1]} scale={[4, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
-      <Shadow renderOrder={1} stop={0.5} opacity={0.6} position={[0, -1.8, 1.5]} scale={[2.6, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Shadow renderOrder={2} position={[0, -2.5, -0.1]} scale={[4, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
+      <Shadow renderOrder={1} stop={0.5} opacity={0.6} position={[0, -2.5, 1.5]} scale={[2.6, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }
