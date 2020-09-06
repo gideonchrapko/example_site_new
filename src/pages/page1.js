@@ -45,7 +45,7 @@ export default function Page1() {
               onClick={() => window.appHistory.push("/gallery")}
         />
         <Suzanne 
-              position={[0, -1, 0]} 
+              position={[-6, -1, 4]} 
               rotation={[0, 5, 0]}
               onClick={() => window.appHistory.push("/gallery")}
         />
