@@ -7,7 +7,7 @@ import Environment from '../components_3d/Environment'
 import Suzanne from '../components_3d/Suzanne'
 import Effects from '../components_3d/Effects'
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls } from 'drei'
 
 // import Scene from '../components_3d/Scene'
 
@@ -30,8 +30,8 @@ export default function Page1() {
 //       }}
       >
       {/* <Controls disable={set} /> */}
-      <Controls />
-      {/* <OrbitControls /> */}
+      {/* <Controls /> */}
+      <OrbitControls />
       <Suspense fallback={<Dom center>Loading...</Dom>}>
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
         <fog attach="fog" args={["#242424", 10, 20]} />
