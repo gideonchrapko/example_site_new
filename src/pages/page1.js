@@ -16,53 +16,43 @@ import { PerspectiveCamera } from 'drei'
 
 export default function Page1() {
   // Controls disable pointerevents on movement to save some CPU cost
-//   const [active, set] = useState(false)
+  const [active, set] = useState(false)
   return (
-    <Canvas
-    concurrent
-//     noEvents={active}
-//     pixelRatio={window.devicePixelRatio}
-//     camera={{ position: [0, 0, 10] }}
-//     gl={{ antialias: false }}
-//     onCreated={({ gl, scene }) => {
-//       gl.toneMapping = THREE.ACESFilmicToneMapping
-//       gl.outputEncoding = THREE.sRGBEncoding
-//       scene.background = new THREE.Color('#242424')
-//       }}
-      >
-      {/* <Controls disable={set} /> */}
-      {/* <Controls /> */}
-      {/* <OrbitControls /> */}
-      <Suspense fallback={<Dom center>Loading...</Dom>}>
-      <pointLight position={[0, 10, -10]} intensity={2} />
-            <Sphere position={[0, 0, 0]} />
-        {/* <fog attach="fog" args={["#242424", 10, 20]} /> */}
+      <Canvas
+      concurrent
+          noEvents={active}
+          pixelRatio={window.devicePixelRatio}
+          camera={{ position: [0, 0, 10] }}
+          gl={{ antialias: false }}
+          onCreated={({ gl, scene }) => {
+            gl.toneMapping = THREE.ACESFilmicToneMapping
+            gl.outputEncoding = THREE.sRGBEncoding
+            scene.background = new THREE.Color('#242424')
+            }}
+        >
+        <Controls disable={set} />
+        <Suspense fallback={<Dom center>Loading...</Dom>}>
+          <fog attach="fog" args={["#242424", 10, 20]} />
         <Suzanne
-              position={[0, 0, 0]}
-              rotation={[0, 3, 0]}
-              onClick={() => window.appHistory.push("/shop")}
-        />
-      {/* <Suzanne
-              position={[0, -1, -7]}
-              rotation={[0, 3, 0]}
-              onClick={() => window.appHistory.push("/shop")}
-        /> */}
-        <Suzanne 
-              position={[6, -1, 4]}
-              rotation={[0, 1, 0]}
-              onClick={() => window.appHistory.push("/gallery")}
-        />
-        <Suzanne 
-              position={[-7, -1, 4]}
-              rotation={[0, 5, 0]}
-              onClick={() => window.appHistory.push("/gallery")}
-        />
-        {/* <PerspectiveCamera makeDefault position={[1, 1, -15]} > */}
-            {/* <Lights /> */}
-            {/* <Environment /> */}
-            {/* <Effects /> */}
-        {/* </PerspectiveCamera> */}
-      </Suspense>
-    </Canvas>
-  )
+                position={[0, -1, -7]}
+                rotation={[0, 3, 0]}
+                onPointerUp={() => window.appHistory.push("/shop")}
+          />
+          <Suzanne 
+                position={[6, -1, 4]}
+                rotation={[0, 1, 0]}
+                onPointerUp={() => window.appHistory.push("/gallery")}
+          />
+          <Suzanne 
+                position={[-7, -1, 4]}
+                rotation={[0, 5, 0]}
+                onPointerUp={() => window.appHistory.push("/gallery")}
+          />
+          <PerspectiveCamera makeDefault position={[1, 1, -15]} >
+              <Lights />
+              <Environment />
+          </PerspectiveCamera>
+        </Suspense>
+      </Canvas>
+      )
 }
