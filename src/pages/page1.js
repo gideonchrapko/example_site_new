@@ -7,7 +7,8 @@ import Environment from '../components_3d/Environment'
 import Suzanne from '../components_3d/Suzanne'
 import Effects from '../components_3d/Effects'
 
-import { OrbitControls } from 'drei'
+import Sphere from '../components_3d/Sphere'
+
 
 // import Scene from '../components_3d/Scene'
 
@@ -21,7 +22,7 @@ export default function Page1() {
     concurrent
 //     noEvents={active}
 //     pixelRatio={window.devicePixelRatio}
-    camera={{ position: [0, 0, 10] }}
+//     camera={{ position: [0, 0, 10] }}
 //     gl={{ antialias: false }}
 //     onCreated={({ gl, scene }) => {
 //       gl.toneMapping = THREE.ACESFilmicToneMapping
@@ -31,15 +32,21 @@ export default function Page1() {
       >
       {/* <Controls disable={set} /> */}
       {/* <Controls /> */}
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Suspense fallback={<Dom center>Loading...</Dom>}>
-      {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
-        <fog attach="fog" args={["#242424", 10, 20]} />
+      <pointLight position={[0, 10, -10]} intensity={2} />
+            <Sphere position={[0, 0, 0]} />
+        {/* <fog attach="fog" args={["#242424", 10, 20]} /> */}
         <Suzanne
-              position={[0, -1, -7]}
+              position={[0, 0, 0]}
               rotation={[0, 3, 0]}
               onClick={() => window.appHistory.push("/shop")}
         />
+      {/* <Suzanne
+              position={[0, -1, -7]}
+              rotation={[0, 3, 0]}
+              onClick={() => window.appHistory.push("/shop")}
+        /> */}
         <Suzanne 
               position={[6, -1, 4]}
               rotation={[0, 1, 0]}
@@ -50,11 +57,11 @@ export default function Page1() {
               rotation={[0, 5, 0]}
               onClick={() => window.appHistory.push("/gallery")}
         />
-        <PerspectiveCamera makeDefault position={[1, 1, -15]} >
-            <Lights />
-            <Environment />
+        {/* <PerspectiveCamera makeDefault position={[1, 1, -15]} > */}
+            {/* <Lights /> */}
+            {/* <Environment /> */}
             {/* <Effects /> */}
-        </PerspectiveCamera>
+        {/* </PerspectiveCamera> */}
       </Suspense>
     </Canvas>
   )
