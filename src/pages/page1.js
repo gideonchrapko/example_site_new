@@ -7,27 +7,31 @@ import Environment from '../components_3d/Environment'
 import Suzanne from '../components_3d/Suzanne'
 import Effects from '../components_3d/Effects'
 
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+
 // import Scene from '../components_3d/Scene'
 
 import { PerspectiveCamera } from 'drei'
 
 export default function Page1() {
   // Controls disable pointerevents on movement to save some CPU cost
-  const [active, set] = useState(false)
+//   const [active, set] = useState(false)
   return (
     <Canvas
     concurrent
-    noEvents={active}
-    pixelRatio={window.devicePixelRatio}
+//     noEvents={active}
+//     pixelRatio={window.devicePixelRatio}
     camera={{ position: [0, 0, 10] }}
-    gl={{ antialias: false }}
-    onCreated={({ gl, scene }) => {
-      gl.toneMapping = THREE.ACESFilmicToneMapping
-      gl.outputEncoding = THREE.sRGBEncoding
-      scene.background = new THREE.Color('#242424')
-      }}
+//     gl={{ antialias: false }}
+//     onCreated={({ gl, scene }) => {
+//       gl.toneMapping = THREE.ACESFilmicToneMapping
+//       gl.outputEncoding = THREE.sRGBEncoding
+//       scene.background = new THREE.Color('#242424')
+//       }}
       >
       {/* <Controls disable={set} /> */}
+      <Controls />
+      {/* <OrbitControls /> */}
       <Suspense fallback={<Dom center>Loading...</Dom>}>
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
         <fog attach="fog" args={["#242424", 10, 20]} />
