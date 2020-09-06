@@ -33,25 +33,37 @@ export default function Page1() {
       <Controls disable={set} />
       <Suspense fallback={<Dom center>Loading...</Dom>}>
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
-      <fog attach="fog" args={["#242424", 10, 20]} />
-      <Suzanne 
-            position={[5, -0.5, -4]} 
-            rotation={[0, -4, 0]}
-            onClick={() => window.appHistory.push("/shop")}
-      />
-      <Sphere 
-            position={[-5, -1, -4]} 
-            onClick={() => window.appHistory.push("/gallery")}
-      />
-      <Sphere 
-            position={[4, -1, 6]} 
-            onClick={() => window.appHistory.push("/gallery")}
-      />
-      <PerspectiveCamera makeDefault position={[1, 1, -15]} >
-          <Lights />
-          <Environment />
-          <Effects />
-      </PerspectiveCamera>
+        <fog attach="fog" args={["#242424", 10, 20]} />
+        <Suzanne
+              position={[0, -1, -7]} 
+              rotation={[0, 3, 0]}
+              onClick={() => window.appHistory.push("/shop")}
+        />
+        <Suzanne 
+              position={[6, -1, 4]} 
+              rotation={[0, 1, 0]}
+              onClick={() => window.appHistory.push("/gallery")}
+        />
+        <Suzanne 
+              position={[0, -1, 0]} 
+              rotation={[0, 5, 0]}
+              onClick={() => window.appHistory.push("/gallery")}
+        />
+        {/* <Sphere 
+              position={[0, -1, 0]} 
+              rotation={[0, -4, 0]}
+              onClick={() => window.appHistory.push("/gallery")}
+        />
+        <Sphere 
+              position={[0, -1, 0]}
+              rotation={[0, -4, 0]}
+              onClick={() => window.appHistory.push("/gallery")}
+        /> */}
+        <PerspectiveCamera makeDefault position={[1, 1, -15]} >
+            <Lights />
+            <Environment />
+            {/* <Effects /> */}
+        </PerspectiveCamera>
       </Suspense>
     </Canvas>
   )
