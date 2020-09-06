@@ -5,11 +5,8 @@ import Controls from '../components_3d/Controls'
 import Lights from '../components_3d/Lights'
 import Environment from '../components_3d/Environment'
 import Suzanne from '../components_3d/Suzanne'
-import Sphere from '../components_3d/Sphere'
-
 import Effects from '../components_3d/Effects'
-import Shadow from '../components_3d/Shadow'
-import Jacket from '../components_3d/Jacket'
+
 // import Scene from '../components_3d/Scene'
 
 import { PerspectiveCamera } from 'drei'
@@ -17,7 +14,6 @@ import { PerspectiveCamera } from 'drei'
 export default function Page1() {
   // Controls disable pointerevents on movement to save some CPU cost
   const [active, set] = useState(false)
-  
   return (
     <Canvas
     concurrent
@@ -29,36 +25,27 @@ export default function Page1() {
       gl.toneMapping = THREE.ACESFilmicToneMapping
       gl.outputEncoding = THREE.sRGBEncoding
       scene.background = new THREE.Color('#242424')
-      }}>
-      <Controls disable={set} />
+      }}
+      >
+      {/* <Controls disable={set} /> */}
       <Suspense fallback={<Dom center>Loading...</Dom>}>
       {/* <pointLight position={[0, 10, -10]} intensity={2} /> */}
         <fog attach="fog" args={["#242424", 10, 20]} />
         <Suzanne
-              position={[0, -1, -7]} 
+              position={[0, -1, -7]}
               rotation={[0, 3, 0]}
               onClick={() => window.appHistory.push("/shop")}
         />
         <Suzanne 
-              position={[6, -1, 4]} 
+              position={[6, -1, 4]}
               rotation={[0, 1, 0]}
               onClick={() => window.appHistory.push("/gallery")}
         />
         <Suzanne 
-              position={[-6, -1, 4]} 
+              position={[-7, -1, 4]}
               rotation={[0, 5, 0]}
               onClick={() => window.appHistory.push("/gallery")}
         />
-        {/* <Sphere 
-              position={[0, -1, 0]} 
-              rotation={[0, -4, 0]}
-              onClick={() => window.appHistory.push("/gallery")}
-        />
-        <Sphere 
-              position={[0, -1, 0]}
-              rotation={[0, -4, 0]}
-              onClick={() => window.appHistory.push("/gallery")}
-        /> */}
         <PerspectiveCamera makeDefault position={[1, 1, -15]} >
             <Lights />
             <Environment />
