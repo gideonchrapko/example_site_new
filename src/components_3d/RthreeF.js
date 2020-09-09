@@ -7,8 +7,8 @@ import Environment from './Environment'
 import Suzanne from './Suzanne'
 import Shadow from './Shadow'
 import Jacket from './Jacket'
+import JacketOne from './JacketOne'
 import Sphere from './Sphere'
-import { a } from 'react-spring'
 
 import { PerspectiveCamera, Html } from 'drei'
 
@@ -32,6 +32,9 @@ const RthreeF = () => {
         <Controls disable={set} />
         <Suspense fallback={<Html center>Loading...</Html>}>
           <fog attach="fog" args={["black", 10, 20]} />
+          <Jacket 
+
+          />
           <Suzanne
                   position={[0, -1, -7]}
                   rotation={[0, 3, 0]}
