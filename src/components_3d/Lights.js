@@ -1,9 +1,6 @@
 import React, { useRef } from 'react'
 import { useFrame } from 'react-three-fiber'
 import Shadow from './Shadow'
-
-import volumetricSpotlight from './VolumetricSpotlight'
-
 export default function Lights() {
 
   return (
@@ -15,7 +12,7 @@ export default function Lights() {
             <meshBasicMaterial attach="material" color="white" />
           </mesh>
         </pointLight> */}
-        <Shadow renderOrder={10} color="white" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -7]} rotation={[-Math.PI / 2, 0, 0]} />
+        <Shadow renderOrder={10} color="white" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -3]} rotation={[-Math.PI / 2, 0, 0]} />
 
     </>
       // <>
