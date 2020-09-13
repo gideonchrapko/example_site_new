@@ -35,25 +35,25 @@ const RthreeF = () => {
           {/* <Sphere 
             position={[0, -1, -2]}
           /> */}
-          <Jacket 
-           />
+          {/* <Jacket 
+           /> */}
           {/* <Car 
             onPointerUp={() => window.appHistory.push("/gallery")}          
           /> */}
           <Suzanne
-                  position={[0, -1, -7]}
+                  position={[0, -1, -5]}
                   rotation={[0, 3, 0]}
                   onPointerUp={() => window.appHistory.push("/shop")}
                   color='white'
             />
             <Suzanne 
-                  position={[6, -1, 4]}
+                  position={[4, -1, 2]}
                   rotation={[0, 1, 0]}
                   onPointerUp={() => window.appHistory.push("/gallery")}
                   color='red'
             />
             <Suzanne 
-                  position={[-7, -1, 4]}
+                  position={[-5, -1, 2]}
                   rotation={[0, 5, 0]}
                   onPointerUp={() => window.appHistory.push("/gallery")}
                   color='green'

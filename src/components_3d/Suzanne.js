@@ -22,7 +22,7 @@ export default function Suzanne(props, color) {
   const [expand, setExpand] = useState(false);
   // React spring expand animation
   const animatedProps = useSpring({
-    hovered: expand ? [2, 2, 2] : [1.5, 1.5, 1.5],
+    hovered: expand ? [3, 3, 3] : [2.5, 2.5, 2.5],
   });
 
   const [hovered, set] = useState(false)
