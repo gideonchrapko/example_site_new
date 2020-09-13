@@ -9,6 +9,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 import Shadow from './Shadow'
 import { a, useSpring } from 'react-spring/three'
+import { Html } from 'drei'
 
 export default function Suzanne(props, color) {
   const group = useRef()
@@ -25,8 +26,8 @@ export default function Suzanne(props, color) {
     hovered: expand ? [2.5, 2.5, 2.5] : [2, 2, 2],
   });
 
-  const [hovered, set] = useState(false)
-  useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  // const [hovered, set] = useState(false)
+  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -35,8 +36,7 @@ export default function Suzanne(props, color) {
         position={[0, -0.75, 0]}
         geometry={nodes.Suzanne.geometry}
         rotation={[-0.61, 0, 0]}
-        onPointerOver={() => setExpand(!expand)}
-        onPointerOut={() => setExpand(expand)}>
+        onPointerOver={() => setExpand(!expand)}>
         <meshStandardMaterial
           attach="material"
           metalness={0.5}
@@ -49,6 +49,9 @@ export default function Suzanne(props, color) {
           normalMap-repeat={[40, 40]}
         />
       </a.mesh>
+      <Html scaleFactor={5} position={[ 0, -2.5, 0 ]}>
+        <h1 style={{ color: 'white', opacity: '0.2' }}>Title</h1>
+      </Html>
       <Shadow renderOrder={2} position={[0, -2.5, -0.1]} scale={[4, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
       <Shadow renderOrder={1} stop={0.5} opacity={0.6} position={[0, -2.5, 1.5]} scale={[2.6, 1, 1]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>

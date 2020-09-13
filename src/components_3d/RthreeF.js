@@ -30,7 +30,7 @@ const RthreeF = () => {
             }}
         >
         <Controls disable={set} />
-        <Suspense fallback={<Html center>Loading...</Html>}>
+        <Suspense fallback={<Html center style={{ color: 'white' }}>Loading...</Html>}>
           <fog attach="fog" args={["black", 10, 20]} />
           {/* <Sphere 
             position={[0, -1, -2]}
