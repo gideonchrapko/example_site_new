@@ -9,6 +9,7 @@ export default function Environment({ background = false }) {
     loader.setDataType(THREE.UnsignedByteType)
     loader.setPath('/pisaHDR/')
   })
+
   useEffect(() => {
     const gen = new THREE.PMREMGenerator(gl)
     gen.compileEquirectangularShader()

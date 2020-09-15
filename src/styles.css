@@ -33,3 +33,61 @@ canvas {
   width: 100vw;
   position: relative;
 }
+
+.bg {
+  position: absolute;
+  /* background: radial-gradient(at 50% 100%, #873740 0%, #3F3F3F 40%, #3F3F3F 80%, #3F3F3F 100%); */
+}
+
+h1 > span {
+  white-space: pre;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(0deg, rgba(63, 12, 88, 0.2) 0%, transparent 100%); */
+  pointer-events: none;
+}
+
+h1.top-left {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12pt;
+  color: #787878;
+}
+
+a {
+  color: inherit;
+  position: absolute;
+  display: inline;
+  text-decoration: none;
+  z-index: 9;
+}
+
+a.top-left2 {
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15pt;
+  color: #48BC2A;
+}
+
+h3 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13pt;
+    color: #48BC2A;
+}
+
+.row {
+  z-index: 999999;
+}

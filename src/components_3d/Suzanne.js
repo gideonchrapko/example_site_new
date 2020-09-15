@@ -26,9 +26,6 @@ export default function Suzanne(props, color) {
     hovered: expand ? [2.5, 2.5, 2.5] : [2, 2, 2],
   });
 
-  // const [hovered, set] = useState(false)
-  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
-
   return (
     <group ref={group} {...props} dispose={null}>
       <a.mesh
