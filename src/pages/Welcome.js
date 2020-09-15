@@ -7,7 +7,9 @@ const Welcome = () => {
             <h1>Welcome Page</h1>
             <h5>Instructions</h5>
             <Link to="/Home">
+                <button>
                 Enter
+                </button>
             </Link>
         </div>
     )
