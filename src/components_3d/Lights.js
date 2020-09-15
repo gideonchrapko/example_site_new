@@ -5,7 +5,6 @@ import Shadow from './Shadow';
 import { Box, Plane } from "drei";
 import VolumetricSpotlight from "./volumetric-spotlight";
 
-
 extend({
   VolumetricSpotlight
 });
@@ -65,7 +64,7 @@ export default function Lights() {
           </mesh>
         </pointLight> */}
          <MyVolSpotlight penumbra={0.5}  />
-        <Shadow renderOrder={10} color="white" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -3]} rotation={[-Math.PI / 2, 0, 0]} />
+        <Shadow renderOrder={10} color="#3396dd" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -3]} rotation={[-Math.PI / 2, 0, 0]} />
     </>
   );
 };
