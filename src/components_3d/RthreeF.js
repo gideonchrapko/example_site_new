@@ -21,7 +21,7 @@ export default function RthreeF() {
 
   return (
     <>
-        <div style={{ position: "absolute", zIndex: "9"}}>
+      <div style={{ position: "absolute", zIndex: "9"}}>
         <img src={Branding} alt="logo" style={{ height: "20vh" }} />
         <button style={{ left: "0" }}>
           left
