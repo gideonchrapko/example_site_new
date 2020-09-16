@@ -18,12 +18,11 @@ function MyVolSpotlight(props) {
     angle = 0.3,
     penumbra = 0.1,
     distance = 60,
-    color='#3396dd',
+    color='#1024b5',
     intensity= 2,
     position = [-15, 6, 12],
     target
   } = props;
-
 
   return (
     <>
@@ -51,7 +50,6 @@ function MyVolSpotlight(props) {
   );
 };
 
-
 export default function Lights() {
 
   return (
@@ -64,7 +62,7 @@ export default function Lights() {
           </mesh>
         </pointLight> */}
          <MyVolSpotlight penumbra={0.5}  />
-        <Shadow renderOrder={10} color="#3396dd" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -3]} rotation={[-Math.PI / 2, 0, 0]} />
+        <Shadow renderOrder={10} color="#1024b5" stop={0.1} scale={[10, 10, 10]} position={[0, -2, -3]} rotation={[-Math.PI / 2, 0, 0]} />
     </>
   );
 };
