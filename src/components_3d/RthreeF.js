@@ -8,12 +8,13 @@ import Suzanne from './Suzanne';
 import Shadow from './Shadow';
 import { PerspectiveCamera, Html } from 'drei';
 import Branding from '../images/wccMin.png';
+import Suzannes from './Suzannes'
+
 import { a, useSpring } from 'react-spring/three';
 
 
 export default function RthreeF() {
   const [active, set] = useState(false)
-
   // const [rotation, setRotation] = useState(false)
   // const animatedProps = useSpring ({
   //   hovered: rotation ? [0, 3, 0] : [0, 6, 0],
@@ -23,12 +24,12 @@ export default function RthreeF() {
     <>
       <div style={{ position: "absolute", zIndex: "9"}}>
         <img src={Branding} alt="logo" style={{ height: "20vh" }} />
-        <button style={{ left: "0" }}>
+        {/* <button>
           left
         </button>
-        <button style={{ right: "0" }}>
+        <button>
           right
-        </button>
+        </button> */}
       </div>
       <Canvas
       concurrent
@@ -46,7 +47,8 @@ export default function RthreeF() {
         <Suspense fallback={<Html center style={{ color: 'white' }}>Loading...</Html>}>
             <fog attach="fog" args={["black", 10, 20]} />
             <group>
-            <Suzanne
+            <Suzannes />
+            {/* <Suzanne
                     position={[0, -1, -5]}
                     rotation={[0, 3, 0]}
                     // rotation={animatedProps.clicked}
@@ -61,7 +63,7 @@ export default function RthreeF() {
                     position={[-5, -1, 2]}
                     rotation={[0, 5, 0]}
                     onPointerUp={() => window.appHistory.push("/gallery")}
-              />
+              /> */}
               <Environment />
             </group>
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>

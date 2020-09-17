@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
 import App from "./App";
 import { createBrowserHistory } from "history";
 import { Router, Route } from "react-router-dom";
+
+import "./styles.css";
 
 const customHistory = createBrowserHistory({
   // basename: config.urlBasename || ""

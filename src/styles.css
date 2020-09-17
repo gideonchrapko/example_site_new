@@ -17,6 +17,11 @@ body,
   overflow: hidden;
 }
 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
 body {
   overflow: hidden;
   overscroll-behavior-y: none;
@@ -63,13 +68,13 @@ h1.top-left {
   color: #787878;
 }
 
-a {
+/* a {
   color: inherit;
   position: absolute;
   display: inline;
   text-decoration: none;
   z-index: 9;
-}
+} */
 
 a.top-left2 {
   padding-top: 10px;
@@ -90,4 +95,25 @@ h3 {
 
 .row {
   z-index: 999999;
+}
+
+/* Menu button  */
+.menu-button { 
+  z-index: 40; 
+  border: none; 
+  position: fixed; 
+  top: 40px; 
+  right: 20px; 
+  padding: 12px; 
+  font-size: 1em; 
+  background: none; 
+  background: #fff; 
+  color: #3395dd; 
+  transition: background 0.1s linear; 
+  cursor: pointer; 
+}
+   
+.menu-button:hover,
+.menu-button:focus { 
+ background: #e8daff; 
 }
