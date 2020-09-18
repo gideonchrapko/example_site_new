@@ -1,36 +1,39 @@
 import * as THREE from 'three';
 import React, { Suspense, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
-import Controls from './Controls';
-import Lights from './Lights';
-import Environment from './Environment';
-import Suzanne from './Suzanne';
-import Shadow from './Shadow';
 import { PerspectiveCamera, Html } from 'drei';
+import { useSpring } from "react-spring";
+
+import Controls from '../components_3d/Controls';
+import Lights from '../components_3d/Lights';
+import Environment from '../components_3d/Environment';
+import Suzanne from '../components_3d/Suzanne';
+import Shadow from '../components_3d/Shadow';
 import Branding from '../images/wccMin.png';
-import Suzannes from './Suzannes'
+import Suzannes from '../components_3d/Suzannes';
+import MenuRight from './Menu';
 
-import { a, useSpring } from 'react-spring/three';
-
-
-export default function RthreeF() {
+const RthreeF = () => {
   const [active, set] = useState(false)
-  // const [rotation, setRotation] = useState(false)
-  // const animatedProps = useSpring ({
-  //   hovered: rotation ? [0, 3, 0] : [0, 6, 0],
-  // });
+  
+  const [rightMenuVisible, setRightMenuVisible] = useState(false);
+  const rightMenuAnimation = useSpring({
+    opacity: rightMenuVisible ? 1 : 0,
+    transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
+  });
 
   return (
     <>
-      <div style={{ position: "absolute", zIndex: "9"}}>
+      <div style={{ position: "absolute", zIndex: "9" }}>
         <img src={Branding} alt="logo" style={{ height: "20vh" }} />
-        {/* <button>
-          left
-        </button>
-        <button>
-          right
-        </button> */}
       </div>
+      <button
+          className="menu-button"
+          onClick={() => setRightMenuVisible(!rightMenuVisible)}
+        >
+          {rightMenuVisible ? "Close" : "Side Menu"}
+        </button>
+        <MenuRight style={rightMenuAnimation}/>
       <Canvas
       concurrent
           noEvents={active}
@@ -45,8 +48,8 @@ export default function RthreeF() {
         >
         <Controls disable={set} />
         <Suspense fallback={<Html center style={{ color: 'white' }}>Loading...</Html>}>
-            <fog attach="fog" args={["black", 10, 20]} />
-            <group>
+        <fog attach="fog" args={["black", 10, 20]} />
+          <group>
             <Suzannes />
             {/* <Suzanne
                     position={[0, -1, -5]}
@@ -73,5 +76,7 @@ export default function RthreeF() {
         </Suspense>
       </Canvas>
     </>
-    )
+    );
 }
+
+export default RthreeF;

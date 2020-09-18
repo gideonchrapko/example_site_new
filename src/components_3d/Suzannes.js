@@ -8,7 +8,6 @@ const Suzannes = () => {
     const animatedProps = useSpring ({
       hovered: rotation ? [0, 3, 0] : [0, 6, 0],
     });
-
     return (
         <>
         <a.group 

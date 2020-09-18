@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Welcome = () => {
     return (
-        <div style={{ paddingLeft: "5vw", textAlign: "center" }}>
-            <h1>Welcome Page</h1>
-            <h5>Instructions</h5>
+        <div style={{ textAlign: "center" }}>
+            <h1>Welcome to the West Coast Customs </h1>
+            <h5>Click and drag to navigate around the 3D navigation bar</h5>
             <Link to="/Home">
                 <button>
                 Enter
