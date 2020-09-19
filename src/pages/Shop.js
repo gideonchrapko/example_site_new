@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useSpring } from "react-spring";
 import MenuRight from './Menu';
 
+import Close from "../images/Close.svg";
+import Open from "../images/Open.svg";
+
 const Shop = () => {
     const [rightMenuVisible, setRightMenuVisible] = useState(false);
     const rightMenuAnimation = useSpring({
@@ -10,12 +13,12 @@ const Shop = () => {
     });
     return (
         <div>
-            <button
+            <img 
                 className="menu-button"
                 onClick={() => setRightMenuVisible(!rightMenuVisible)}
-            >
-                {rightMenuVisible ? "Close" : "Side Menu"}
-            </button>
+                src={rightMenuVisible ? Close : Open}
+                style={{ height: "20px"}}
+            />
             <MenuRight style={rightMenuAnimation}/>
             Shop
 

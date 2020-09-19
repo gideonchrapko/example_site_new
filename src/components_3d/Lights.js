@@ -13,7 +13,6 @@ function MyVolSpotlight(props) {
   const vs = React.useRef();
   const spotlight = React.useRef();
   const { scene } = useThree();
-
   const {
     angle = 0.3,
     penumbra = 0.1,
@@ -35,10 +34,8 @@ function MyVolSpotlight(props) {
         distance={distance}
         color={color}
       />
-
       <mesh position={position} >
         <coneGeometry args={[100, 100, 100, 100, 100, true]} attach="geometry" />
-
         <volumetricSpotlight
           attach="material"
           uniforms-lightColor-value={color}

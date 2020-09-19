@@ -13,10 +13,13 @@ import Branding from '../images/wccMin.png';
 import Suzannes from '../components_3d/Suzannes';
 import MenuRight from './Menu';
 
+import Close from "../images/Close.svg";
+import Open from "../images/Open.svg";
+
 const RthreeF = () => {
   const [active, set] = useState(false)
-  
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
+
   const rightMenuAnimation = useSpring({
     opacity: rightMenuVisible ? 1 : 0,
     transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
@@ -27,13 +30,13 @@ const RthreeF = () => {
       <div style={{ position: "absolute", zIndex: "9" }}>
         <img src={Branding} alt="logo" style={{ height: "20vh" }} />
       </div>
-      <button
-          className="menu-button"
-          onClick={() => setRightMenuVisible(!rightMenuVisible)}
-        >
-          {rightMenuVisible ? "Close" : "Side Menu"}
-        </button>
-        <MenuRight style={rightMenuAnimation}/>
+      <img 
+        className="menu-button"
+        onClick={() => setRightMenuVisible(!rightMenuVisible)}
+        src={rightMenuVisible ? Close : Open}
+        style={{ height: "20px"}}
+      />
+      <MenuRight style={rightMenuAnimation}/>
       <Canvas
       concurrent
           noEvents={active}

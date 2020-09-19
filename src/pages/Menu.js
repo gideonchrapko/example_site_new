@@ -14,15 +14,26 @@ import './menu.css'
           style={{ padding: "20px", height: "50px" }} 
           onClick={() => window.appHistory.push("/home")}
           />
-            <li className="menu-list-item menu-list-item--right"><Link to="/shop">
+            <li className="menu-list-item menu-list-item--right">
+              <Link to="/shop">
               <a href="/" >Shop</a>
-            </Link></li>
-            <li className="menu-list-item menu-list-item--right"><Link to="/gallery">
+              </Link>
+            </li>
+            <li className="menu-list-item menu-list-item--right">
+              <Link to="/gallery">
               <a href="/ ">Gallery</a>
-            </Link></li>
-            <li className="menu-list-item menu-list-item--right"><Link to="/about">
+              </Link>
+            </li>
+            <li className="menu-list-item menu-list-item--right">
+              <Link to="/about">
               <a href="/" >About</a>
-            </Link></li>
+              </Link>
+            </li>
+            <li className="menu-list-item menu-list-item--right">
+              <Link to="/about">
+              <a href="/" >Contact</a>
+              </Link>
+            </li>
       </nav> 
     </animated.div > 
   );
