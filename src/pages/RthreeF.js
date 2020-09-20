@@ -32,12 +32,15 @@ const RthreeF = () => {
     <>
       <div style={{ position: "absolute", zIndex: "9", padding: "25px" }}>
         <img src={Branding} alt="logo" style={{ height: "20vh" }} />
+      </div>
+      <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
         <button 
-        style={{ top: "50vh" }}
-        onClick={() => setRotation(!rotation)}
-      >
-        Rotate
-      </button>
+          style={{ right: "10px" }}
+          onClick={() => setRotation(!rotation)}
+          style={{ right: "0px", position: "fixed" }}
+        >
+          Rotate
+        </button>
       </div>
       <img 
         className="menu-button"
