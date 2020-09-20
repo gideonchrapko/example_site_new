@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring } from "react-spring";
 import MenuRight from './Menu';
-
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
 

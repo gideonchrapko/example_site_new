@@ -51,8 +51,8 @@ export default function Lights() {
 
   return (
     <>
-        <pointLight position={[0, 10, -10]} intensity={2} />
-        <pointLight intensity={3} position={[0, 4, -10]} />
+        <pointLight position={[0, 10, -10]} intensity={1} />
+        <pointLight intensity={1} position={[0, 4, -10]} />
           {/* <mesh position={[0, 0, 0]} >
             <sphereBufferGeometry attach="geometry" args={[0.5, 32, 32]} />
             <meshBasicMaterial attach="material" color="white" />

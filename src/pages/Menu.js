@@ -13,7 +13,7 @@ import './menu.css'
           alt="west coast customs logo" 
           style={{ padding: "20px", height: "50px" }} 
           onClick={() => window.appHistory.push("/home")}
-          />
+        />
             <li className="menu-list-item menu-list-item--right">
               <Link to="/shop">
               <a href="/" >Shop</a>
