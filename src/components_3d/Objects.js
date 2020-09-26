@@ -5,10 +5,8 @@ import { a, useSpring } from 'react-spring/three';
 
 const Objects = ({ rotation }) => {
     const animatedProps = useSpring ({
-      clicked: rotation ? [0, 2, 0] : [0, 6, 0],
-
+      clicked: rotation ? [0, 0.1, 0] : [0, 2, 0],
     });
-    console.log(rotation);
     return (
         <>
         <a.group 
@@ -18,11 +16,11 @@ const Objects = ({ rotation }) => {
                 position={[0, -1, -5]}
                 rotation={[0, 3, 0]}
             />
-            <Shirt />
-            {/* <Suzanne 
+            {/* <Shirt /> */}
+            <Suzanne 
                 position={[4, -1, 2]}
                 rotation={[0, 1, 0]}
-            /> */}
+            />
             <Suzanne
                 position={[-5, -1, 2]}
                 rotation={[0, 5, 0]}

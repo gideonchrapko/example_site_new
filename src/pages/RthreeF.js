@@ -9,8 +9,9 @@ import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
 // import Suzanne from '../components_3d/Suzanne';
 import Shadow from '../components_3d/Shadow';
-import Branding from '../images/wccMin.png';
+import Branding from '../images/wccMinM.png';
 import MenuRight from './Menu';
+import Loading from '../Loading';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
@@ -31,7 +32,7 @@ const RthreeF = () => {
   return (
     <>
       <div style={{ position: "absolute", zIndex: "9", padding: "25px" }}>
-        <img src={Branding} alt="logo" style={{ height: "20vh" }} />
+        <img src={Branding} alt="logo" style={{ height: "10vh" }} />
       </div>
       <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
         <button 
@@ -49,7 +50,7 @@ const RthreeF = () => {
         style={{ height: "20px"}}
       />
       <MenuRight style={rightMenuAnimation}/>
-      <Canvas
+      <Canvas style={{ position: "absoulte", zIndex: "999999999" }}
       concurrent
           noEvents={active}
           pixelRatio={window.devicePixelRatio}
@@ -62,7 +63,7 @@ const RthreeF = () => {
             }}
         >
         <Controls disable={set} />
-        <Suspense fallback={<Html center style={{ color: 'white' }}>Loading...</Html>}>
+        <Suspense fallback={<Html><Loading /></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
           <group>
             <Objects rotation={rotation} />
