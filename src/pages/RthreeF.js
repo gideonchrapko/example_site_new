@@ -8,7 +8,7 @@ import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
 // import Suzanne from '../components_3d/Suzanne';
-import Effects from '../components_3d/Effects'
+// import Effects from '../components_3d/Effects'
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
 import MenuRight from './Menu';
@@ -16,7 +16,7 @@ import Loading from '../Loading';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
-import Branding from '../images/wccMin.png';
+import Branding from '../images/wccMinM.png';
 import Left from '../images/arrowRight.svg';
 import Right from '../images/arrowLeft.svg';
 
@@ -42,13 +42,13 @@ const RthreeF = () => {
           src={Right}
           alt="right"
           onClick={() => setRotation(!rotation)}
-          style={{ right: "20px", position: "fixed", height: "60px", opacity: "0.4" }}
+          style={{ right: "20px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
         <img
           src={Left}
           alt="left"
           onClick={() => setRotation(!rotation)}
-          style={{ left: "20px", position: "fixed", height: "60px", opacity: "0.4" }}
+          style={{ left: "20px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
       <img 
