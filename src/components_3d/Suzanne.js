@@ -33,7 +33,10 @@ export default function Suzanne(props, color) {
         position={[0, -0.75, 0]}
         geometry={nodes.Suzanne.geometry}
         rotation={[-0.61, 0, 0]}
-        onPointerOver={() => setExpand(!expand)}>
+        // onPointerOver={() => setExpand(!expand)}
+        onPointerOver={() => setExpand(true)}
+        onPointerOut={() => setExpand(false)}
+        >
         <meshStandardMaterial
           attach="material"
           metalness={0.5}

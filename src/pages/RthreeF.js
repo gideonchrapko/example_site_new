@@ -8,14 +8,17 @@ import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
 // import Suzanne from '../components_3d/Suzanne';
+import Effects from '../components_3d/Effects'
 import Shadow from '../components_3d/Shadow';
-import Branding from '../images/wccMinM.png';
+import Objects from '../components_3d/Objects';
 import MenuRight from './Menu';
 import Loading from '../Loading';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
-import Objects from '../components_3d/Objects';
+import Branding from '../images/wccMin.png';
+import Left from '../images/arrowRight.svg';
+import Right from '../images/arrowLeft.svg';
 
 
 const RthreeF = () => {
@@ -35,13 +38,18 @@ const RthreeF = () => {
         <img src={Branding} alt="logo" style={{ height: "10vh" }} />
       </div>
       <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
-        <button 
-          style={{ right: "10px" }}
+        <img
+          src={Right}
+          alt="right"
           onClick={() => setRotation(!rotation)}
-          style={{ right: "0px", position: "fixed" }}
-        >
-          Rotate
-        </button>
+          style={{ right: "20px", position: "fixed", height: "60px", opacity: "0.4" }}
+        />
+        <img
+          src={Left}
+          alt="left"
+          onClick={() => setRotation(!rotation)}
+          style={{ left: "20px", position: "fixed", height: "60px", opacity: "0.4" }}
+        />
       </div>
       <img 
         className="menu-button"
@@ -68,7 +76,7 @@ const RthreeF = () => {
           <group>
             <Objects rotation={rotation} />
               <Environment />
-            </group>
+          </group>
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>
             <Lights />
             <Shadow />
