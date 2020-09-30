@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import React, { Suspense, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { PerspectiveCamera, Html } from 'drei';
-import { useSpring } from "react-spring";
+import { a, useSpring } from "react-spring";
 
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
