@@ -15,10 +15,10 @@ class Loading extends React.Component {
       return(
         <div>
           <Lottie 
-                style={{position: "relative", marginTop: "-150px", marginLeft: "-150px"}}
+                style={{position: "relative", marginTop: "-100px", marginLeft: "-100px"}}
                 options={defaultOptions}
-                height={250}
-                width={250}
+                height={150}
+                width={150}
           />
         </div>
       )

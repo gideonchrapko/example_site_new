@@ -1,12 +1,12 @@
 import React from 'react';
-import { animated } from 'react-spring';
-import Baseball from '../images/WCC_bb.png'
-import { Link } from 'react-router-dom'
-import './menu.css'
+import { a } from 'react-spring';
+import Baseball from '../images/WCC_bb.png';
+import { Link } from 'react-router-dom';
+import './menu.css';
 
   export default function MenuRight({ style }) {
   return (
-    <animated.div style={style} className="menu menu--right">
+    <a.div style={style} className="menu menu--right">
       <nav> 
         <img 
           src={Baseball} 
@@ -16,25 +16,25 @@ import './menu.css'
         />
             <li className="menu-list-item menu-list-item--right">
               <Link to="/shop">
-              <a href="/" >Shop</a>
+                Shop  
               </Link>
             </li>
             <li className="menu-list-item menu-list-item--right">
               <Link to="/gallery">
-              <a href="/ ">Gallery</a>
+                Gallery 
               </Link>
             </li>
             <li className="menu-list-item menu-list-item--right">
               <Link to="/about">
-              <a href="/" >About</a>
+                About 
               </Link>
             </li>
             <li className="menu-list-item menu-list-item--right">
               <Link to="/about">
-              <a href="/" >Contact</a>
+                Contact 
               </Link>
             </li>
       </nav> 
-    </animated.div > 
+    </a.div > 
   );
 }

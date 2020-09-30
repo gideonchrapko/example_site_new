@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import { useSpring } from "react-spring"
 
 import RthreeF from "./pages/RthreeF";
 import About from './pages/About';

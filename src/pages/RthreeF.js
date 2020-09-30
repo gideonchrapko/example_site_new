@@ -7,8 +7,6 @@ import { useSpring } from "react-spring";
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
-// import Suzanne from '../components_3d/Suzanne';
-// import Effects from '../components_3d/Effects'
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
 import MenuRight from './Menu';
@@ -22,11 +20,11 @@ import Right from '../images/arrowLeft.svg';
 
 
 const RthreeF = () => {
-  
-  const [rotation, setRotation] = useState(false)
+
+  const [click, setClick] = useState("null")
+
   const [active, set] = useState(false)
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
-
   const rightMenuAnimation = useSpring({
     opacity: rightMenuVisible ? 1 : 0,
     transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
@@ -35,20 +33,20 @@ const RthreeF = () => {
   return (
     <>
       <div style={{ position: "absolute", zIndex: "9", padding: "25px" }}>
-        <img src={Branding} alt="logo" style={{ height: "10vh" }} />
+        <img src={Branding} alt="logo" style={{ height: "20vh" }} />
       </div>
       <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
         <img
           src={Right}
           alt="right"
-          onClick={() => setRotation(!rotation)}
-          style={{ right: "20px", position: "fixed", height: "50px", opacity: "0.7" }}
+          onClick={() => setClick("right")}
+          style={{ right: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
         <img
           src={Left}
           alt="left"
-          onClick={() => setRotation(!rotation)}
-          style={{ left: "20px", position: "fixed", height: "50px", opacity: "0.7" }}
+          onClick={() => setClick("left")}
+          style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
       <img 
@@ -70,11 +68,13 @@ const RthreeF = () => {
             scene.background = new THREE.Color('black')
             }}
         >
-        <Controls disable={set} />
+        <Controls  />
         <Suspense fallback={<Html><Loading /></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
           <group>
-            <Objects rotation={rotation} />
+            <Objects 
+              click={click}
+             />
               <Environment />
           </group>
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>

@@ -8,7 +8,7 @@ import { useLoader } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 import Shadow from './Shadow'
-import { a, useSpring } from 'react-spring/three'
+import { a, useSpring } from '@react-spring/three'
 import { Html } from 'drei'
 
 export default function Suzanne(props, color) {
