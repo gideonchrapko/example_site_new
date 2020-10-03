@@ -33,10 +33,10 @@ const Objects = ({ click }) => {
                     position={[4, -1, 2]}
                     rotation={[0, 1, 0]}
                 />
-                <Suzanne
+                {/* <Suzanne
                     position={[-5, -1, 2]}
                     rotation={[0, 5, 0]}
-                />
+                /> */}
             </a.group>
         </>
     )
