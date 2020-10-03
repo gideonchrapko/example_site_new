@@ -1,6 +1,7 @@
 import React from 'react';
 import Suzanne from './Suzanne';
-import { a, useSpring } from '@react-spring/three';
+import Shirt from './shirt'
+import { a, useSpring, native } from '@react-spring/three';
 
 
 const Objects = ({ click }) => {
@@ -23,11 +24,11 @@ const Objects = ({ click }) => {
         <>
             {/* <a.group> */}
             <a.group {...spring}>
-                <Suzanne
+                {/* <Suzanne
                     position={[0, -1, -5]}
                     rotation={[0, 3, 0]}
-                />
-                {/* <Shirt /> */}
+                /> */}
+                <Shirt />
                 <Suzanne 
                     position={[4, -1, 2]}
                     rotation={[0, 1, 0]}

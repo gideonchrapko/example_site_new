@@ -18,12 +18,11 @@ import Branding from '../images/wccMinM.png';
 import Left from '../images/arrowRight.svg';
 import Right from '../images/arrowLeft.svg';
 
-
 const RthreeF = () => {
+  const [click, setClick] = useState('right')
+  console.log(click)
 
-  const [click, setClick] = useState("null")
-
-  const [active, set] = useState(false)
+  const [active, set] = useState('')
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
   const rightMenuAnimation = useSpring({
     opacity: rightMenuVisible ? 1 : 0,
@@ -39,13 +38,13 @@ const RthreeF = () => {
         <img
           src={Right}
           alt="right"
-          onClick={() => setClick("right")}
+          onClick={() => setClick('left')}
           style={{ right: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
         <img
           src={Left}
           alt="left"
-          onClick={() => setClick("left")}
+          onClick={() => setClick('right')}
           style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
@@ -57,7 +56,7 @@ const RthreeF = () => {
       />
       <MenuRight style={rightMenuAnimation}/>
       <Canvas style={{ position: "absoulte", zIndex: "999999999" }}
-      concurrent
+          concurrent
           noEvents={active}
           pixelRatio={window.devicePixelRatio}
           camera={{ position: [0, 0, 10] }}
@@ -67,12 +66,13 @@ const RthreeF = () => {
             gl.outputEncoding = THREE.sRGBEncoding
             scene.background = new THREE.Color('black')
             }}
-        >
-        <Controls  />
+      >
+        <Controls  disable={set}/>
         <Suspense fallback={<Html><Loading /></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
           <group>
             <Objects 
+              // click={click}
               click={click}
              />
               <Environment />
