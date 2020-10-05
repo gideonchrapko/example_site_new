@@ -13,7 +13,7 @@ export default function Shadow({ stop = 0.3, color = 'black', opacity = 0.9, ...
     context.fillStyle = gradient
     context.fillRect(0, 0, canvas.width, canvas.height)
     return canvas
-  }, [opacity])
+  }, [opacity, color, stop])
   return (
     <mesh {...props}>
       <planeBufferGeometry attach="geometry" args={[1, 1]} />
