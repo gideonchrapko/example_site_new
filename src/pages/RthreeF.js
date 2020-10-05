@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import React, { Suspense, useState, useRef } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { PerspectiveCamera, Html } from 'drei';
-// import { useSpring, a } from "react-spring";
+import { useSpring, a } from "@react-spring/core";
 
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
@@ -10,7 +10,7 @@ import Environment from '../components_3d/Environment';
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
 import Loading from '../Loading';
-// import MenuRight from './Menu';
+import MenuRight from './Menu';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
@@ -22,10 +22,10 @@ const RthreeF = () => {
 
   const childRef = useRef();
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
-  // const rightMenuAnimation = useSpring({
-  //     opacity: rightMenuVisible ? 1 : 0,
-  //     transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
-  // }); 
+  const rightMenuAnimation = useSpring({
+      opacity: rightMenuVisible ? 1 : 0,
+      transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
+  }); 
   const [active, set] = useState(false)
 
   return (
@@ -47,13 +47,13 @@ const RthreeF = () => {
           style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
-      {/* <img 
+      <img 
         className="menu-button"
         onClick={() => setRightMenuVisible(!rightMenuVisible)}
         src={rightMenuVisible ? Close : Open}
         style={{ height: "20px"}}
-      /> */}
-      {/* <MenuRight style={rightMenuAnimation}/> */}
+      />
+      <MenuRight style={rightMenuAnimation}/>
       <Canvas style={{ position: "absoulte", zIndex: "999999999" }}
           concurrent
           noEvents={active}
@@ -67,7 +67,7 @@ const RthreeF = () => {
             }}
       >
         <Controls disable={set}/>
-        <Suspense fallback={<Html><Loading /></Html>}>
+        <Suspense fallback={<Html style={{ position: "fixed", height: "100vh", width: "100vw", backgroundColor: "blue" }}><Loading/></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
               <Objects ref={childRef} />
               <Environment />

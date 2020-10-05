@@ -22,12 +22,6 @@ export default function Frame(props) {
   const { nodes, materials } = useLoader(GLTFLoader, '/frame.glb', draco('/draco-gltf/'))
   return (
     <group ref={group} {...props} dispose={null}>
-      {/* <mesh
-        material={nodes.Plane.material}
-        geometry={nodes.Plane.geometry}
-        position={[0.03, 0.73, -0.01]}
-        rotation={[0, 0, -Math.PI / 2]}
-      /> */}
       <a.mesh
         material={materials['initialShadingGroup.001']}
         geometry={nodes.g_PictureFrame001.geometry}

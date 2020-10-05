@@ -1,6 +1,8 @@
 import React,{ forwardRef, useRef, useImperativeHandle } from 'react';
 import { useSpring, a } from '@react-spring/three';
+
 import Suzanne from './Suzanne';
+import Car from './Car';
 import ShirtModel from './ShirtModel';
 import Frame from './Frame';
 
@@ -10,7 +12,7 @@ const Objects = forwardRef((props, ref) => {
         ref,
         () => ({
             onClick() {
-                rotation[1] -= 1.8;
+                rotation[1] -= 2.1;
                 set({ rotation: [...rotation] });
               }
         }),
@@ -26,14 +28,11 @@ const Objects = forwardRef((props, ref) => {
             <a.group {...spring}>
                 <ShirtModel />
                 <Frame />
-                {/* <Suzanne 
-                    position={[4, -1, 2]}
-                    rotation={[0, 1, 0]}
-                /> */}
-                <Suzanne
+                <Car />
+                {/* <Suzanne
                     position={[-5, -1, 2]}
                     rotation={[0, 5, 0]}
-                />
+                /> */}
             </a.group>
         </>
     )

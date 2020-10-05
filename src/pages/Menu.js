@@ -1,19 +1,20 @@
 import React from 'react';
-// import { a } from 'react-spring';
-import Baseball from '../images/WCC_bb.png';
+import { a } from '@react-spring/web';
 import { Link } from 'react-router-dom';
 import './menu.css';
 
+import Baseball from '../images/WCC_bb.png';
+import Cart from '../images/cart.svg';
+
   export default function MenuRight({ style }) {
   return (
-    <div style={style} className="menu menu--right">
+    <a.div style={style} className="menu menu--right">
       <nav> 
-        <img 
-          src={Baseball} 
-          alt="west coast customs logo" 
-          style={{ padding: "20px", height: "50px" }} 
-          onClick={() => window.appHistory.push("/home")}
-        />
+            <img 
+              src={Cart} 
+              alt="car" 
+              style={{ padding: "30px", height: "20px" }} 
+            />
             <li className="menu-list-item menu-list-item--right">
               <Link to="/shop">
                 Shop  
@@ -34,7 +35,15 @@ import './menu.css';
                 Contact 
               </Link>
             </li>
+            <div style={{ width: "100%" }}>
+              <img 
+                src={Baseball} 
+                alt="west coast customs logo" 
+                style={{ paddingTop: "30px", height: "30px", display: "block", marginLeft: "auto", marginRight: "auto" }} 
+                onClick={() => window.appHistory.push("/home")}
+              />
+            </div>
       </nav> 
-    </div > 
+    </a.div > 
   );
 }
