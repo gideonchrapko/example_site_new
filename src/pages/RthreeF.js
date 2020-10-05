@@ -6,13 +6,11 @@ import { useSpring, a } from "react-spring";
 
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
-import Environment from '../components_3d/Environment';
+// import Environment from '../components_3d/Environment';
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
 import Loading from '../Loading';
 import MenuRight from './Menu';
-
-import Suzanne from '../components_3d/Suzanne';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
@@ -45,7 +43,7 @@ const RthreeF = () => {
         <img
           src={Left}
           alt="left"
-          onClick={() => childRef.current.onClick()}
+          // onClick={() => childRef.current.onClick()}
           style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
@@ -72,7 +70,7 @@ const RthreeF = () => {
         <Suspense fallback={<Html><Loading /></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
               <Objects ref={childRef} />
-              <Environment />
+              {/* <Environment /> */}
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>
             <Lights />
             <Shadow />
