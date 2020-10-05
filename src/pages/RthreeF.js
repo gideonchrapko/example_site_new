@@ -72,7 +72,7 @@ const RthreeF = () => {
               <Objects ref={childRef} />
               {/* <Environment /> */}
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>
-            <Lights />
+            {/* <Lights /> */}
             <Shadow />
           </PerspectiveCamera>
         </Suspense>
