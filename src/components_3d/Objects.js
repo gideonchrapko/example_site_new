@@ -1,7 +1,7 @@
 import React,{ forwardRef, useRef, useImperativeHandle } from 'react';
 import { useSpring, a } from '@react-spring/three';
 import Suzanne from './Suzanne';
-import Shirt from './shirt';
+import ShirtModel from './ShirtModel';
 import Frame from './Frame';
 
 let rotation = [0, 1, 0];
@@ -24,7 +24,7 @@ const Objects = forwardRef((props, ref) => {
     return (
         <>
             <a.group {...spring}>
-                <Shirt />
+                <ShirtModel />
                 <Frame />
                 {/* <Suzanne 
                     position={[4, -1, 2]}

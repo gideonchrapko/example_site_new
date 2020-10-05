@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { draco, Html } from 'drei'
 import { a, useSpring } from '@react-spring/three'
 
-export default function Shirt(props) {
+export default function ShirtModel(props) {
 
   const [expand, setExpand] = useState(false);
   // React spring expand animation
