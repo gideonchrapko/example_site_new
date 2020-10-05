@@ -5,12 +5,12 @@ import { PerspectiveCamera, Html } from 'drei';
 // import { useSpring, a } from "react-spring";
 
 import Controls from '../components_3d/Controls';
-// import Lights from '../components_3d/Lights';
-// import Environment from '../components_3d/Environment';
+import Lights from '../components_3d/Lights';
+import Environment from '../components_3d/Environment';
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
 import Loading from '../Loading';
-import MenuRight from './Menu';
+// import MenuRight from './Menu';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
