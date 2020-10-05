@@ -1,12 +1,12 @@
 import React from 'react';
-import { a } from 'react-spring';
+// import { a } from 'react-spring';
 import Baseball from '../images/WCC_bb.png';
 import { Link } from 'react-router-dom';
 import './menu.css';
 
   export default function MenuRight({ style }) {
   return (
-    <a.div style={style} className="menu menu--right">
+    <div style={style} className="menu menu--right">
       <nav> 
         <img 
           src={Baseball} 
@@ -35,6 +35,6 @@ import './menu.css';
               </Link>
             </li>
       </nav> 
-    </a.div > 
+    </div > 
   );
 }

@@ -43,7 +43,7 @@ const RthreeF = () => {
         <img
           src={Left}
           alt="left"
-          // onClick={() => childRef.current.onClick()}
+          onClick={() => childRef.current.onClick()}
           style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
