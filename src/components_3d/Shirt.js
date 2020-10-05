@@ -13,26 +13,27 @@ export default function Shirt(props) {
   const [expand, setExpand] = useState(false);
   // React spring expand animation
   const animatedProps = useSpring({
-    hovered: expand ? [0.04, 0.04, 0.04] : [0.035, 0.035, 0.035],
+    hovered: expand ? [0.035, 0.035, 0.035] : [0.03, 0.03, 0.03],
   });
 
   const group = useRef()
   const { nodes, materials } = useLoader(GLTFLoader, '/shirt.glb', draco('/draco-gltf/'))
   return (
     <group ref={group} {...props} dispose={null}>
-      <a.mesh
-        position={[0, -2.5, -4.5]}
-        onPointerOver={() => setExpand(true)}
-        onPointerOut={() => setExpand(false)}
-        scale={animatedProps.hovered}
-        material={materials.Material}
-        geometry={nodes['T-Shirt'].geometry}
-        rotation={[Math.PI / 2, 0, 0]}
-        // scale={[0.04, 0.04, 0.04]}
-      />
-      <Html scaleFactor={5} position={[ 0, -2.5, 0 ]}>
-        <h1 style={{ color: 'white', opacity: '0.2' }}>Shop</h1>
-      </Html>
+      <group>
+        <a.mesh
+          position={[0, -2.5, -4.5]}
+          onPointerOver={() => setExpand(true)}
+          onPointerOut={() => setExpand(false)}
+          scale={animatedProps.hovered}
+          material={materials.Material}
+          geometry={nodes['T-Shirt'].geometry}
+          rotation={[Math.PI / 2, 0, 0]}
+        />
+      </group>
+      <Html scaleFactor={5} position={[0, -3.5, -4.5]}>
+          <h1 style={{ color: 'white', opacity: '0.2' }}>Shop</h1>
+        </Html>
     </group>
   )
 }

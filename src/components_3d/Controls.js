@@ -14,7 +14,7 @@ export default function Controls({ disable, ...props }) {
       ref.current.addEventListener('start', () => disable(true))
       ref.current.addEventListener('end', () => disable(false))
     }
-  }, [])
+  }, [disable])
 
   return (
     <orbitControls

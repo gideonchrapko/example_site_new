@@ -1,16 +1,18 @@
 import * as THREE from 'three';
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useRef } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { PerspectiveCamera, Html } from 'drei';
-import { a, useSpring } from "react-spring";
+import { useSpring, a } from "react-spring";
 
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
-import MenuRight from './Menu';
 import Loading from '../Loading';
+import MenuRight from './Menu';
+
+import Suzanne from '../components_3d/Suzanne';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
@@ -19,32 +21,31 @@ import Left from '../images/arrowRight.svg';
 import Right from '../images/arrowLeft.svg';
 
 const RthreeF = () => {
-  const [click, setClick] = useState('right')
-  console.log(click)
 
-  const [active, set] = useState('')
+  const childRef = useRef();
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
   const rightMenuAnimation = useSpring({
-    opacity: rightMenuVisible ? 1 : 0,
-    transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
-  });
+      opacity: rightMenuVisible ? 1 : 0,
+      transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
+  }); 
+  const [active, set] = useState(false)
 
   return (
     <>
       <div style={{ position: "absolute", zIndex: "9", padding: "25px" }}>
-        <img src={Branding} alt="logo" style={{ height: "20vh" }} />
+        <img src={Branding} alt="logo" style={{ height: "30vh" }} />
       </div>
       <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
         <img
           src={Right}
           alt="right"
-          onClick={() => setClick('left')}
+          onClick={() => childRef.current.onClick()}
           style={{ right: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
         <img
           src={Left}
           alt="left"
-          onClick={() => setClick('right')}
+          onClick={() => childRef.current.onClick()}
           style={{ left: "40px", position: "fixed", height: "50px", opacity: "0.7" }}
         />
       </div>
@@ -67,16 +68,11 @@ const RthreeF = () => {
             scene.background = new THREE.Color('black')
             }}
       >
-        <Controls  disable={set}/>
+        <Controls disable={set}/>
         <Suspense fallback={<Html><Loading /></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
-          <group>
-            <Objects 
-              // click={click}
-              click={click}
-             />
+              <Objects ref={childRef} />
               <Environment />
-          </group>
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>
             <Lights />
             <Shadow />

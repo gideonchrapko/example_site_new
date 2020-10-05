@@ -14,6 +14,7 @@ const Gallery = () => {
     return (
         <div>
             <img 
+                alt="menu"
                 className="menu-button"
                 onClick={() => setRightMenuVisible(!rightMenuVisible)}
                 src={rightMenuVisible ? Close : Open}

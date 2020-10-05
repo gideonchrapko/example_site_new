@@ -1,45 +1,42 @@
-import React from 'react';
+import React,{ forwardRef, useRef, useImperativeHandle } from 'react';
+import { useSpring, a } from '@react-spring/three';
 import Suzanne from './Suzanne';
-import Shirt from './shirt'
-import { a, useSpring, native } from '@react-spring/three';
+import Shirt from './shirt';
+import Frame from './Frame';
 
+let rotation = [0, 1, 0];
+const Objects = forwardRef((props, ref) => {
+    useImperativeHandle(
+        ref,
+        () => ({
+            onClick() {
+                rotation[1] -= 1.8;
+                set({ rotation: [...rotation] });
+              }
+        }),
+    )
 
-const Objects = ({ click }) => {
-
-    const [spring, set] = useSpring(() => ({
+      const [spring, set] = useSpring(() => ({
         rotation: [...rotation],
-        config: { mass: 3, friction: 40, tension: 800 }
-      }));
-    
-    let rotation = [0, 1, 0];
-    const isClicked = click;
-    if (isClicked === "right") {
-        rotation[1] -= 1;
-        set({ rotation: [...rotation] });
-    } if (isClicked === "left") {
-        rotation[1] += 1;
-        set({ rotation: [...rotation] });
-    }
+        config: { mass: 3, friction: 40, tension: 400 }
+      }))
+
     return (
         <>
-            {/* <a.group> */}
             <a.group {...spring}>
-                {/* <Suzanne
-                    position={[0, -1, -5]}
-                    rotation={[0, 3, 0]}
-                /> */}
                 <Shirt />
-                <Suzanne 
+                <Frame />
+                {/* <Suzanne 
                     position={[4, -1, 2]}
                     rotation={[0, 1, 0]}
-                />
-                {/* <Suzanne
+                /> */}
+                <Suzanne
                     position={[-5, -1, 2]}
                     rotation={[0, 5, 0]}
-                /> */}
+                />
             </a.group>
         </>
     )
-}
+})
 
-export default Objects
+export default Objects;
