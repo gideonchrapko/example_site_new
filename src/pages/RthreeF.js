@@ -5,7 +5,7 @@ import { PerspectiveCamera, Html } from 'drei';
 import { useSpring, a } from "react-spring";
 
 import Controls from '../components_3d/Controls';
-import Lights from '../components_3d/Lights';
+// import Lights from '../components_3d/Lights';
 // import Environment from '../components_3d/Environment';
 import Shadow from '../components_3d/Shadow';
 import Objects from '../components_3d/Objects';
