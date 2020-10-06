@@ -1,5 +1,7 @@
 import React,{ forwardRef, useRef, useImperativeHandle } from 'react';
-import { useSpring, a } from '@react-spring/three';
+// import { useSpring, a } from '@react-spring/three';
+import { useSpring, config } from '@react-spring/core';
+import { a } from '@react-spring/three';
 
 import Suzanne from './Suzanne';
 import Car from './Car';
@@ -7,6 +9,7 @@ import ShirtModel from './ShirtModel';
 import Frame from './Frame';
 
 let rotation = [0, 1, 0];
+
 const Objects = forwardRef((props, ref) => {
     useImperativeHandle(
         ref,

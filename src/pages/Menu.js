@@ -1,5 +1,5 @@
 import React from 'react';
-import { a } from '@react-spring/web';
+// import { a } from '@react-spring/web';
 import { Link } from 'react-router-dom';
 import './menu.css';
 
@@ -8,7 +8,8 @@ import Cart from '../images/cart.svg';
 
   export default function MenuRight({ style }) {
   return (
-    <a.div style={style} className="menu menu--right">
+    // <a.div style={style} className="menu menu--right">
+    <div style={style} className="menu menu--right">
       <nav> 
             <img 
               src={Cart} 
@@ -44,6 +45,7 @@ import Cart from '../images/cart.svg';
               />
             </div>
       </nav> 
-    </a.div > 
+    </div > 
+  //  </a.div > 
   );
 }

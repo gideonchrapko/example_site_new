@@ -7,7 +7,9 @@ import React, { useRef, useState } from 'react';
 import { useLoader } from 'react-three-fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { draco, Html } from 'drei';
-import { a, useSpring } from '@react-spring/three';
+
+import { useSpring } from '@react-spring/core';
+import { a } from '@react-spring/three';
 
 
 export default function Frame(props) {
