@@ -3,7 +3,6 @@ import React, { Suspense, useState, useRef } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { PerspectiveCamera, Html } from 'drei';
 
-
 import Controls from '../components_3d/Controls';
 import Lights from '../components_3d/Lights';
 import Environment from '../components_3d/Environment';
