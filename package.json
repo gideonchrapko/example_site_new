@@ -27,13 +27,16 @@
     "three": "0.116.1"
   },
   "devDependencies": {
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "CI= react-scripts build && echo '/* /index.html  200' | cat >build/_redirects",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "patch-package"
   },
   "browserslist": [
     ">0.2%",
