@@ -11,13 +11,13 @@
     top: 20px; 
     right: 0; 
     width: 250px; 
-    height: 45vh;
+    height: 55vh;
   }
 /* One */
 /* Two */
   .menu-list { 
     padding: 5px; 
-    list-style: none; 
+    list-style: none;
   }
       
   /* .menu-list--right { 
