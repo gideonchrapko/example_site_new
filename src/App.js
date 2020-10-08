@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import RthreeF from "./pages/RthreeF";
@@ -6,15 +6,8 @@ import About from './pages/About';
 import Shop from './pages/Shop';
 import Gallery from './pages/Gallery';
 import Welcome from './pages/Welcome';
-import { MenuRight } from './pages/Menu';
 
 export default function App() {
-  // const [rightMenuVisible, setRightMenuVisible] = useState(false);
-  // const rightMenuAnimation = useSpring({
-  //   opacity: rightMenuVisible ? 1 : 0,
-  //   transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
-  // });
-
   return (
     <div>
       <Switch>

@@ -15,8 +15,8 @@ import MenuRight from './Menu';
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
 import Branding from '../images/wccMinM.png';
-import Left from '../images/arrowRight.svg';
-import Right from '../images/arrowLeft.svg';
+import Left from '../images/arrowRight.png';
+import Right from '../images/arrowLeft.png';
 
 const RthreeF = () => {
 
@@ -31,7 +31,7 @@ const RthreeF = () => {
   return (
     <>
       <div style={{ position: "absolute", zIndex: "9", padding: "25px" }}>
-        <img src={Branding} alt="logo" style={{ height: "30vh" }} />
+        <img src={Branding} alt="logo" style={{ height: "25vh" }} />
       </div>
       <div style={{ marginRight: "0px", top: "50vh", position: "absolute", zIndex: "9", }}>
         <img
@@ -55,7 +55,7 @@ const RthreeF = () => {
         style={{ height: "20px"}}
       />
       <MenuRight style={rightMenuAnimation}/>
-      <Canvas style={{ position: "absoulte", zIndex: "999999999" }}
+      <Canvas
           concurrent
           noEvents={active}
           pixelRatio={window.devicePixelRatio}
@@ -68,7 +68,7 @@ const RthreeF = () => {
             }}
       >
         <Controls disable={set}/>
-        <Suspense fallback={<Html style={{ position: "fixed", height: "100vh", width: "100vw", backgroundColor: "blue" }}><Loading/></Html>}>
+        <Suspense fallback={<Html center><Loading/></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
               <Objects ref={childRef} />
               <Environment />

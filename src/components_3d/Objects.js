@@ -1,9 +1,7 @@
-import React,{ forwardRef, useRef, useImperativeHandle } from 'react';
-// import { useSpring, a } from '@react-spring/three';
-import { useSpring, config } from '@react-spring/core';
+import React,{ forwardRef, useImperativeHandle } from 'react';
+import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/three';
 
-import Suzanne from './Suzanne';
 import Car from './Car';
 import ShirtModel from './ShirtModel';
 import Frame from './Frame';
@@ -32,10 +30,6 @@ const Objects = forwardRef((props, ref) => {
                 <ShirtModel />
                 <Frame />
                 <Car />
-                {/* <Suzanne
-                    position={[-5, -1, 2]}
-                    rotation={[0, 5, 0]}
-                /> */}
             </a.group>
         </>
     )

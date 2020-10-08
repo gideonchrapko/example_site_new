@@ -1,8 +1,6 @@
-import * as THREE from "three";
 import React from 'react';
-import { useThree, extend, useResource } from 'react-three-fiber';
+import { extend } from 'react-three-fiber';
 import Shadow from './Shadow';
-import { Box, Plane } from "drei";
 import VolumetricSpotlight from "./volumetric-spotlight";
 
 extend({
@@ -10,9 +8,9 @@ extend({
 });
 
 function MyVolSpotlight(props) {
-  const vs = React.useRef();
+  // const vs = React.useRef();
   const spotlight = React.useRef();
-  const { scene } = useThree();
+  // const { scene } = useThree();
   const {
     angle = 0.3,
     penumbra = 0.1,
