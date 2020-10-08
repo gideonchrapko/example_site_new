@@ -6,7 +6,7 @@ import Car from './Car';
 import ShirtModel from './ShirtModel';
 import Frame from './Frame';
 
-let rotation = [0, 1, 0];
+let rotation = [0, 2, 0];
 
 const Objects = forwardRef((props, ref) => {
     useImperativeHandle(
