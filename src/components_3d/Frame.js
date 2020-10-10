@@ -33,7 +33,7 @@ export default function Frame(props) {
         onPointerOver={() => setExpand(true)}
         onPointerOut={() => setExpand(false)}
       />
-        <Html scaleFactor={5} position={[4, -3.5, 1.8]}>
+        <Html scaleFactor={5} position={[4, -3, 1.8]}>
           <h1 style={{ color: 'white', opacity: '0.2' }}>Gallery</h1>
         </Html>
     </group>

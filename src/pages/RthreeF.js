@@ -14,19 +14,19 @@ import MenuRight from './Menu';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
-import Branding from '../images/wccMinM.png';
+import Branding from '../images/wccMin.png';
 import Left from '../images/arrowRight.png';
 import Right from '../images/arrowLeft.png';
 
 const RthreeF = () => {
 
+  const [active, set] = useState(false);
   const childRef = useRef();
   const [rightMenuVisible, setRightMenuVisible] = useState(false);
   const rightMenuAnimation = useSpring({
       opacity: rightMenuVisible ? 1 : 0,
       transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
   }); 
-  const [active, set] = useState(false)
 
   return (
     <>

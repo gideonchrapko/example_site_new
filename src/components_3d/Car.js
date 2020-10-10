@@ -34,8 +34,8 @@ export default function Car(props) {
         <mesh material={materials.car_glass} geometry={nodes['Untitled.002_1'].geometry} />
         <mesh material={materials.car_tire} geometry={nodes['Untitled.002_2'].geometry} />
       </a.group>
-      <Html scaleFactor={5} position={[-4.5, -3, 1]}>
-        <h1 style={{ color: 'white', opacity: '0.2' }}>Gallery</h1>
+      <Html scaleFactor={5} position={[-4.5, -2.5, 1]}>
+        <h1 style={{ color: 'white', opacity: '0.2' }}>About</h1>
       </Html>
     </group>
   )
