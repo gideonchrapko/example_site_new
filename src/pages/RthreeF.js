@@ -15,8 +15,8 @@ import MenuRight from './Menu';
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
 import Branding from '../images/wccMin.png';
-import Left from '../images/arrowRight.png';
-import Right from '../images/arrowLeft.png';
+import Left from '../images/arrowLeft.png';
+import Right from '../images/arrowRight.png';
 
 const RthreeF = () => {
 
