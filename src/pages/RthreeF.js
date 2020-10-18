@@ -52,7 +52,7 @@ const RthreeF = () => {
         className="menu-button"
         onClick={() => setRightMenuVisible(!rightMenuVisible)}
         src={rightMenuVisible ? Close : Open}
-        style={{ height: "20px"}}
+        style={{ height: "20px" }}
       />
       <MenuRight style={rightMenuAnimation}/>
       <Canvas

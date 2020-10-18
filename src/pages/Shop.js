@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring } from "@react-spring/core";
 import MenuRight from './Menu';
+import GenericProductPage from './GenericProductPage';
 
 import Close from "../images/Close.svg";
 import Open from "../images/Open.svg";
@@ -21,8 +22,7 @@ const Shop = () => {
                 style={{ height: "20px"}}
             />
             <MenuRight style={rightMenuAnimation}/>
-            Shop
-
+            <GenericProductPage />
         </div>
     )
 }

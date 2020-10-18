@@ -11,7 +11,6 @@ import { draco, Html } from 'drei';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/three';
 
-
 export default function Frame(props) {
 
   const [expand, setExpand] = useState(false);
