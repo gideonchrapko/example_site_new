@@ -70,7 +70,9 @@ const RthreeF = () => {
         <Controls disable={set}/>
         <Suspense fallback={<Html center><Loading/></Html>}>
         <fog attach="fog" args={["black", 10, 20]} />
-              <Objects ref={childRef} />
+              <Objects 
+                ref={childRef}
+              />
               <Environment />
           <PerspectiveCamera makeDefault position={[1, 1, -15]}>
             <Lights />

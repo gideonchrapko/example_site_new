@@ -16,7 +16,7 @@ export default function Car(props) {
   const [expand, setExpand] = useState(false);
   // React spring expand animation
   const animatedProps = useSpring({
-    hovered: expand ? [1.5, 1.5, 1.5] : [1.2, 1.2, 1.2],
+    hovered: expand ? [1.5, 1.5, 1.5] : [1, 1, 1],
   });
 
   const group = useRef()

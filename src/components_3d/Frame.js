@@ -16,7 +16,7 @@ export default function Frame(props) {
   const [expand, setExpand] = useState(false);
   // React spring expand animation
   const animatedProps = useSpring({
-    hovered: expand ? [2.5, 2.5, 2.5] : [2, 2, 2],
+    hovered: expand ? [2, 2, 2] : [1.5, 1.5, 1.5],
   });
 
   const group = useRef()
@@ -32,7 +32,7 @@ export default function Frame(props) {
         onPointerOver={() => setExpand(true)}
         onPointerOut={() => setExpand(false)}
       />
-        <Html scaleFactor={5} position={[4, -3, 1.8]}>
+        <Html scaleFactor={5} position={[4, -2.3, 1.8]}>
           <h1 style={{ color: 'white', opacity: '0.2' }}>Gallery</h1>
         </Html>
     </group>

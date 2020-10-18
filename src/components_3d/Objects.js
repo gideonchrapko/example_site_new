@@ -24,6 +24,8 @@ const Objects = forwardRef((props, ref) => {
         config: { mass: 3, friction: 40, tension: 400 }
       }))
 
+
+
     return (
         <>
             <a.group {...spring}>
