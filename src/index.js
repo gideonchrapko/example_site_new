@@ -7,7 +7,8 @@ import Client from 'shopify-buy';
 
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
-import { store, persistor} from './Store';
+import store from './Store';
+import persistor from './persistStore';
 
 import './styles/shopify.css';
 import "./styles/index.css";
