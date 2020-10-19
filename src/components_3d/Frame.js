@@ -24,6 +24,7 @@ export default function Frame(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <a.mesh
+        onPointerUp={() => window.appHistory.push("/gallery")}
         material={materials['initialShadingGroup.001']}
         geometry={nodes.g_PictureFrame001.geometry}
         position={[4, -0.5, 1.8]}

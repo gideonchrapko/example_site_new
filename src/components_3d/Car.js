@@ -24,6 +24,7 @@ export default function Car(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <a.group 
+        onPointerUp={() => window.appHistory.push("/about")}
         position={[-5, -1.5, 0.8]}
         rotation={[0.2, -1.1, 0]}
         scale={animatedProps.hovered}

@@ -17,6 +17,7 @@ class GenericProductsPage extends React.Component {
     });
   }
   render () {
+
     const state = store.getState(); // state from redux store
     let oProducts = <Products
       products={state.products}

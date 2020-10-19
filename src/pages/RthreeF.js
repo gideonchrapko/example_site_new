@@ -18,6 +18,8 @@ import Branding from '../images/wccMin.png';
 import Left from '../images/arrowLeft.png';
 import Right from '../images/arrowRight.png';
 
+
+
 const RthreeF = () => {
 
   const [active, set] = useState(false);
@@ -27,6 +29,7 @@ const RthreeF = () => {
       opacity: rightMenuVisible ? 1 : 0,
       transform: rightMenuVisible ? `translateX(0)` : `translateX(100%)`
   }); 
+
 
   return (
     <>

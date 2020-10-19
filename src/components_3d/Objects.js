@@ -5,6 +5,9 @@ import { a } from '@react-spring/three';
 import Car from './Car';
 import ShirtModel from './ShirtModel';
 import Frame from './Frame';
+import Sphere from './Sphere';
+
+
 
 let rotation = [0, 2, 0];
 
@@ -18,17 +21,15 @@ const Objects = forwardRef((props, ref) => {
               }
         }),
     )
-
       const [spring, set] = useSpring(() => ({
         rotation: [...rotation],
         config: { mass: 3, friction: 40, tension: 400 }
       }))
 
-
-
     return (
         <>
             <a.group {...spring}>
+                <Sphere />
                 <ShirtModel />
                 <Frame />
                 <Car />
